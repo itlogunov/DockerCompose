@@ -4,6 +4,8 @@
 
 `docker-compose up -d --build`
 
+`http://localhost:8088`
+
 ---
 
 #### mysql
