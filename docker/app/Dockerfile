@@ -18,8 +18,8 @@ RUN apt-get install -y \
     php7.4-mbstring \
     php7.4-zip \
     php7.4-xml \
+    php7.4-gd \
     php7.4-mysql \
-    php-imagick \
     curl \
     wget \
     git \
@@ -29,6 +29,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     apt-get update
 
 COPY ./nginx/default /etc/nginx/sites-available/
+
+ADD ./php/php.ini /etc/php/7.4/fpm/conf.d/40-custom.ini
 
 CMD service php7.4-fpm start && nginx -g "daemon off;"
 

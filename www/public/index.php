@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $pdo = new PDO('mysql:host=db;dbname=db_project', 'root', 'secret');
+    $pdo = new PDO('mysql:host=db;dbname=db', 'root', 'secret');
     if ($pdo instanceof PDO) {
         echo 'Подключение к БД выполнено';
     }
