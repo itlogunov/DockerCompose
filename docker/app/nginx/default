@@ -2,9 +2,9 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
 
-    server_name _;
+    server_name localhost;
     root /var/www/public;
-    index index.php;
+    index index.php index.html;
 
     #sendfile off;
     client_max_body_size 64m;

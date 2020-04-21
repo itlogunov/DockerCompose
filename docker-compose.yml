@@ -19,7 +19,7 @@ services:
     build:
       context: ./docker/app
     ports:
-      - 8088:80
+      - 9000:80
     volumes:
       - ./www:/var/www
     depends_on:
